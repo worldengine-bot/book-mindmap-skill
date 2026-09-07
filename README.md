@@ -6,7 +6,7 @@
 
 > 一个 **Claude Code Skill**：把任意格式书籍一键转成知识图谱。
 > 你只需说一句话（或 `/book-to-mindmap`），底层脚本由 Skill 自动执行，**无需手动装 Python、敲命令**。
-![Uploading 《Politics》思维导图-standard.png…]()
+
 
 ---
 
