@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+node_modules/
+.DS_Store
+*.log
+
+# 书籍原文（受版权保护，不提交）
+*.epub
+*.pdf
+*.docx
