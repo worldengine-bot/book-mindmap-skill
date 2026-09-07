@@ -364,3 +364,10 @@ A: Yes — modify the API call part of `summarize_chapters.py`. DeepSeek is the 
 
 **Q: How big a book can it handle?**
 A: Theoretically unbounded — chapters are split and processed independently, plus checkpoint resume, so even 1000+ page books complete gradually.
+
+---
+## Copyright Notice
+
+This project does not contain any original book texts, PDFs, EPUBs, or other complete, copyright-protected content.
+
+The sample outputs in this repository are provided solely to demonstrate the tool's capabilities. Users are responsible for ensuring that any book content they import, process, or share complies with applicable copyright laws, platform rules, and relevant licensing requirements.
