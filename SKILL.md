@@ -23,6 +23,13 @@ description: >
 > 当用户说"生成脑图"/"导出XMind"时，使用 Python 流水线。
 > 当用户只说"帮我整理这本书"而未指定格式时，主动询问偏好。
 
+## 输出语言（跟随提问者）
+
+生成结果的**语言跟随提问者**：英文提问 → 英文导图 / HTML；中文提问 → 中文。
+
+- **Python 流水线**：调用脚本时传 `--lang en` 或 `--lang zh`（`--lang auto` 会按书籍文本语言自动判断，作为兜底）。
+- **手工 HTML 模式**：直接用提问者的语言撰写全部内容（标题、Tab、正文）。
+
 ---
 
 ## 模式一：Python 自动流水线（DeepSeek API）
@@ -201,7 +208,7 @@ python main.py 巨著.pdf --purpose pre-read --checkpoint --workers 12
 | `--mode, -m` | `detailed` | summary / standard / detailed / comprehensive（仅 post-read） |
 | `--genre, -g` | `auto` | 流派自动检测或手动指定 |
 | `--format, -f` | `markdown` | markdown / opml / both |
-| `--lang, -l` | `zh` | zh / en / auto |
+| `--lang, -l` | `auto` | zh / en / auto（跟随用户语言，auto 按书籍文本兜底） |
 | `--workers, -w` | `8` | 并发 API 调用数 |
 | `--output, -o` | `./output/<书名>_mindmap.md` | 自定义输出路径 |
 | `--checkpoint` | off | 启用断点续跑 |

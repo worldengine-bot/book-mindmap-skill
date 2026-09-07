@@ -1136,7 +1136,7 @@ def main():
         choices=["auto", "business", "philosophy", "tech", "literature", "academic", "self-help"],
         help="书籍流派（默认自动检测）",
     )
-    parser.add_argument("--lang", default="zh", choices=["zh", "en", "auto"], help="输出语言")
+    parser.add_argument("--lang", default="auto", choices=["zh", "en", "auto"], help="输出语言")
     parser.add_argument("--max-workers", type=int, default=DEFAULT_WORKERS,
                         help=f"并发线程数（默认 {DEFAULT_WORKERS}）")
     parser.add_argument("--checkpoint", action="store_true", help="启用断点续跑")

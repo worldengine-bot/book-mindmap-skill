@@ -93,8 +93,8 @@ def main() -> None:
         choices=["auto", "business", "philosophy", "tech", "literature", "academic", "self-help"],
         help="书籍流派（默认 auto 自动检测）",
     )
-    parser.add_argument("--lang", "-l", default="zh", choices=["zh", "en", "auto"],
-                        help="输出语言（默认 zh）")
+    parser.add_argument("--lang", "-l", default="auto", choices=["zh", "en", "auto"],
+                        help="输出语言（默认 auto 按书籍文本判断；跟随用户语言请传 en/zh）")
 
     # ── 性能控制 ──
     parser.add_argument("--workers", "-w", type=int, default=8,
