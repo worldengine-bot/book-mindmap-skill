@@ -10,3 +10,6 @@ node_modules/
 *.epub
 *.pdf
 *.docx
+
+# 私人输出（生成的知识图谱，不提交）
+output/
