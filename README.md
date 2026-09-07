@@ -51,7 +51,34 @@ export BOOK_MINDMAP_WORKERS="10"            # 并发数，默认 8
 
 ---
 
-## 模式一：Python 流水线（Markdown + OPML → XMind）
+## 支持的模型（不限 DeepSeek / Claude）
+
+摘要步骤走的是 **OpenAI 兼容接口**，任何支持该协议的服务都能用；默认选 DeepSeek 只因性价比高：
+
+| 想用 | 需要设置的环境变量 |
+|------|------------------|
+| DeepSeek（默认） | `DEEPSEEK_API_KEY=sk-...` |
+| OpenAI / Codex | `DEEPSEEK_API_KEY=<OpenAI key>` · `DEEPSEEK_BASE_URL=https://api.openai.com/v1` · `BOOK_MINDMAP_MODEL=gpt-...` |
+| 其他（Gemini / Qwen / GLM / Moonshot…） | 同上，换成对应 `base_url` 与模型名 |
+
+> 换模型只改 3 个环境变量（变量名沿用 DeepSeek 命名，属历史遗留）。三个 Python 脚本本身是普通 CLI，不依赖 Claude，任何 agent 或终端都能调用。
+
+---
+
+## 模式一：XMind 思维导图（Python 流水线）
+
+从书籍到可导入 XMind 的导图，自动跑完三步：
+
+```
+书籍文件 → [1] 解析文本 → [2] AI 逐章分析 → [3] 生成 .md / .opml
+```
+
+1. **解析**：`parse_book.py` 提取纯文本（PDF / EPUB / DOCX / TXT 通吃）
+2. **分析**：`summarize_chapters.py` 并发调用大模型逐章结构化提炼
+   - 自动识别流派（商业 · 哲学 · 技术 · 文学 · 学术 · 自我提升），套用对应模板
+   - 两种用途：`pre-read` 读前路线图（可填充的阅读模板）/ `post-read` 读后总结（默认）
+   - 四级深度：`summary → standard → detailed → comprehensive`
+3. **生成**：`build_mindmap.py` 输出 XMind 兼容的 Markdown / OPML
 
 ### 一键运行
 
