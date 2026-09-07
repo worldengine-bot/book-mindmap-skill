@@ -1,5 +1,6 @@
 <img width="1197" height="672" alt="截屏2026-09-07 13 47 36" src="https://github.com/user-attachments/assets/59ee1ea1-e2f9-4e91-8e84-bb23bede3e08" /># 📚 book-to-mindmap
-![Uploading 截屏2026-09-07 13.48.15.png…]()
+![Uploading AI产业全景图谱.png…]()
+
 
 
 > 一个 **Claude Code Skill**：把任意格式书籍一键转成知识图谱。
