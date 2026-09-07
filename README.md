@@ -18,23 +18,14 @@
 
 ## 快速上手
 
-1. 把本项目放入 Claude Code 的 skills 目录（如 `~/.claude/skills/book-to-mindmap/`）。
-2. 配置 DeepSeek Key（仅 XMind 模式需要）：
-
-```bash
-export DEEPSEEK_API_KEY="sk-..."
-# 获取 Key：https://platform.deepseek.com/api_keys
-```
-
-3. 直接对 Claude 说：
+复制下面任意一行，直接发给 Claude 即可：
 
 ```
-/book-to-mindmap 深度工作.pdf          # 生成思维导图（默认 detailed）
-生成脑图 深度工作.pdf                   # 同上，自然语言触发
-/html 深度工作.pdf                     # 生成交互式 HTML 知识图谱
+生成脑图 深度工作.pdf        # → 产出 .md/.opml，导入 XMind
+/html 深度工作.pdf          # → 产出单文件交互式 HTML 图谱
 ```
 
-> 作为 Skill 使用时，Python 依赖与脚本运行都由 Skill 代劳，你不需要手动执行下面这些命令。
+> 首次使用只需两件事：① 把本仓库放进 skills 目录（如 `~/.claude/skills/book-to-mindmap/`）；② 配好 `DEEPSEEK_API_KEY`（见「环境要求」）。之后每次一句话即可，无需再装任何东西。
 
 ---
 
