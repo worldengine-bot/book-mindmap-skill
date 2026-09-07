@@ -16,6 +16,18 @@
 
 ---
 
+## 一键安装
+
+复制下面这行发给任意 agent，它会自动把 skill 装好并引导配置：
+
+```
+请安装 book-to-mindmap 技能：克隆 https://github.com/worldengine-bot/book-mindmap-skill 到 skills 目录，并引导我配置 DeepSeek API Key（没有 Key 的话告诉我去哪申请）
+```
+
+> 装好后再看「快速上手」，一句话即可生成导图。
+
+---
+
 ## 快速上手
 
 复制下面任意一行，直接发给 Claude 即可：
