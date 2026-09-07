@@ -1,3 +1,5 @@
+<img width="1197" height="672" alt="AI产业全景图谱 交互式知识图谱示例" src="https://github.com/user-attachments/assets/59ee1ea1-e2f9-4e91-8e84-bb23bede3e08" />
+
 # 📚 book-to-mindmap
 
 > Turn any book into an interactive knowledge map — a **Claude Code Skill**.
